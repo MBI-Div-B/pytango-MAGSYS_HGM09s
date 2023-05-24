@@ -1,6 +1,3 @@
-
-    
-    
 import serial
 from tango import AttrWriteType, DevState, DeviceProxy, DispLevel, Attr
 from tango.server import Device, attribute, command, device_property
@@ -69,23 +66,23 @@ class Gaussmeter(Device):
         return float(result)
 
 
-    %@command
-    %def test(self):
-    %    # Print a confirmation to the console
-    %    print("Gaussmeter module is working")
+    #@command
+    #def test(self):
+    #    # Print a confirmation to the console
+    #    print("Gaussmeter module is working")
 
-    %@attribute(dtype=float, access=AttrWriteType.READ, label="Field", unit="T", display_level=DispLevel.OPERATOR)
-    %def field(self):
-    %    # Attribute for the current field value
-    %    return self.read_field()
+    #@attribute(dtype=float, access=AttrWriteType.READ, label="Field", unit="T", display_level=DispLevel.OPERATOR)
+    #def field(self):
+    #    # Attribute for the current field value
+    #    return self.read_field()
 
-    %@attribute(dtype=str, access=AttrWriteType.READ, label="Device Model")
-    %def device_model(self):
-    %    return "MAGSYS HGM09s"
+    #@attribute(dtype=str, access=AttrWriteType.READ, label="Device Model")
+    #def device_model(self):
+    #    return "MAGSYS HGM09s"
 
-    %@attribute(dtype=str, access=AttrWriteType.READ, label="Manufacturer")
-    %def manufacturer(self):
-    %    return "MAGSYS Magnet Systeme GmbH"
+    #@attribute(dtype=str, access=AttrWriteType.READ, label="Manufacturer")
+    #def manufacturer(self):
+    #    return "MAGSYS Magnet Systeme GmbH"
 
 
 if __name__ == "__main__":
